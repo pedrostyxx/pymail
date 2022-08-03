@@ -20,6 +20,8 @@ def cleaner():
         os.system('cls')
     else:
         os.system('clear')
+
+
 cleaner()
 
 # Destinatário e conteudo do email
@@ -29,12 +31,14 @@ email_body = input('Conteúdo do email: ')
 
 def send_email():
     msg = email.message.Message()
-    msg['Subject'] = "." # Assunto do email
-    msg['From'] = data_dict['yourGmail'] # Quem está enviando
-    msg['To'] = email_destination # Para quem está enviando
-    password = data_dict['googlePassword']# Senha de aplicativo dispnibilizada pela Google
-    msg.add_header('Content-Type', 'text/html') # Tipo de conteudo da mensagem (Também pode ser definido como MKDW)
-    msg.set_payload(email_body) # Setagem de mensagem que será enviada
+    msg['Subject'] = "."  # Assunto do email
+    msg['From'] = data_dict['yourGmail']  # Quem está enviando
+    msg['To'] = email_destination  # Para quem está enviando
+    # Senha de aplicativo dispnibilizada pela Google
+    password = data_dict['googlePassword']
+    # Tipo de conteudo da mensagem (Também pode ser definido como MKDW)
+    msg.add_header('Content-Type', 'text/html')
+    msg.set_payload(email_body)  # Setagem de mensagem que será enviada
 
     # Configuração padrão para conexão e codificação da mensagem
     s = smtplib.SMTP('smtp.gmail.com: 587')
@@ -43,4 +47,6 @@ def send_email():
     s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
 
     print('\nEmail enviado!')
+
+
 send_email()
