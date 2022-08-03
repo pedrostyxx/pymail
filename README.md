@@ -17,5 +17,10 @@
  ![enter image description here](https://imgur.com/dFQNO1x.png)
  - Clique em "***Email***" e em "***Selecionar dispositivo***" você pode escolher o que quiser, após ter feito isso clique no botão "***GERAR***" e pronto, você já tem uma senha para usar no arquivo "***config.json***"
  
+ 
+ 
  ![enter image description here](https://imgur.com/q7mqqxI.png)
+ 
+ 
+ 
  Agora é só executar o arquivo main 😃
